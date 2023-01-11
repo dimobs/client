@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .App-logo {
@@ -25,11 +27,15 @@
   font-size: calc(10px + 2vmin);
   color: white;
 } */
-header {
+.header {
   list-style-type: none;
   margin: auto;
   padding: 0;
   background-color: #607588;
+}
+
+header ul {
+  margin: 0;
 }
 
 header ul li {
@@ -45,7 +51,7 @@ header ul li a {
   margin: 0 1em;
 }
 
-header ul li a:hover {
+.header ul li a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -62,14 +68,14 @@ header ul li a:hover {
     transform: rotate(360deg);
   }
 }
-.header_bottom {
-      
+
+.header_bottom {      
   background-color: #f0b74c;
   text-align: center;
   padding: 5px 0;
 }
 
-img.App-logo {
+.header img.App-logo {
   width: 80px;
   height: 80px;
   padding: 1em;
