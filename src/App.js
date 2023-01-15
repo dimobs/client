@@ -3,6 +3,7 @@ import BookList from './pages/BookList';
 import { LoadingFetch } from './pages/LoadingFetch';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
+import Salute from './layouts/Salute';
 
 const books = [
   { "title": "Word of the rigns", "author": "Lepa brena", "year": 1980 },
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Salute />
       <LoadingFetch />
       <BookList books={books} />
       <Footer />
