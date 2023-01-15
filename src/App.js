@@ -1,30 +1,27 @@
+import { Header } from './components/common/Header';
+import { Footer } from './components/common/Footer';
+import { Search } from './components/search/Search';
+import { UserList } from './components/user-list/UserList';
 import './App.css';
-import BookList from './pages/BookList';
-import { LoadingFetch } from './pages/LoadingFetch';
-import { Footer } from './components/Footer';
-import { Header } from './components/Header';
-import Salute from './layouts/Salute';
-
-const books = [
-  { "title": "Word of the rigns", "author": "Lepa brena", "year": 1980 },
-  { "title": "Word of the rigns", "author": "Lepa brena", "year": 1981 },
-  { "title": "Word of the rigns", "author": "Lepa brena", "year": 1982 },
-  { "title": "Word of the rigns", "author": "Lepa brena", "year": 1983 },
-  { "title": "Word of the rigns", "author": "Lepa brena", "year": 1984 },
-  { "title": "Word of the rigns", "author": "Lepa brena", "year": 1985 },
-  { "title": "Word of the rigns", "author": "Lepa brena", "year": 1986 },
-]
+import Salute from './services/Salute';
 
 function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Salute />
-      <LoadingFetch />
-      <BookList books={books} />
-      <Footer />
-    </div>
-  );
+    return (
+        <div>
+            <Header />
+
+            <main className="main">
+                <section className="card users-container">
+                    <Salute />
+
+                    <Search />
+                    <UserList />
+                </section>
+            </main>
+
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
