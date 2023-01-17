@@ -4,6 +4,8 @@ import { Search } from './components/search/Search';
 import { UserList } from './components/user-list/UserList';
 import './App.css';
 import Salute from './services/Salute/Salute';
+import { Login } from './pages/loginPage/Login';
+import { Register } from './pages/loginPage/Register';
 
 function App() {
     return (
@@ -15,6 +17,8 @@ function App() {
                     <Salute />
 
                     <Search />
+                    <Login />
+                    {/* <Register /> */}
                     <UserList />
                 </section>
             </main>
