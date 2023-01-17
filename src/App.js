@@ -3,7 +3,7 @@ import { Footer } from './components/common/Footer';
 import { Search } from './components/search/Search';
 import { UserList } from './components/user-list/UserList';
 import './App.css';
-import Salute from './services/Salute';
+import Salute from './services/Salute/Salute';
 
 function App() {
     return (
