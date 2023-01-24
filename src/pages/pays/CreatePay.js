@@ -1,17 +1,19 @@
+import styles from './createPay.module.css'
+
 export const CreatePay = () => {
 
     return (
         <>
  <>
-  <div className="admin">
+  <div className={styles.admin}>
     <li>
       <a href="/paymentHistory">View History</a>
     </li>
   </div>
   <h1>Payment Page</h1>
   <p>Expense Tracker</p>
-  <i className="fa-regular fa-arrow-right-to-arc" />
-  <div className="form">
+  <i className={styles["fa-regular fa-arrow-right-to-arc"]} />
+  <div className= {styles.form}>
     <form action="/createPay" method="POST">
       <select name="sender">
         <option>Select Sender Name*</option>
@@ -33,21 +35,16 @@ export const CreatePay = () => {
         </option>
         <option value="Ivanka">Ivanka Dimova Karachorbadzhieva</option>
       </select>
-      {"{"}
-      {"{"}!--{" "}
+    
       <p style={{ display: "inline-block", color: "grey" }}>
         Format: dd/mm/yyyy
       </p>{" "}
-      --{"}"}
-      {"}"}
-      {"{"}
-      {"{"}!--{" "}
-      <h5 style={{ padding: "10px 10px 10px 10px" }} className="mt-4 card-info">
+          <h5 style={{ padding: "10px 10px 10px 10px" }} className="mt-4 card-info">
         <label htmlFor=""> Date: </label>
-        <i className="far fa-calendar-alt" />
+        <i className={styles["far fa-calendar-alt"]} />
         <span>2021-06-16</span> --{"}"}
         {"}"}
-        <label htmlFor="">Date:</label> <i className="far fa-calendar-alt" />
+        <label htmlFor="">Date:</label> <i className={styles["far fa-calendar-alt"]} />
         <input
           name="date"
           type="text"
@@ -64,7 +61,7 @@ export const CreatePay = () => {
             name="amount"
             defaultValue=""
           />
-          <i className="fas fa-hand-holding-usd" />
+          <i className={styles["fas fa-hand-holding-usd"]} />
         </div>
         {"{"}
         {"{"}!--{" "}
