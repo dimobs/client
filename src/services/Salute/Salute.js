@@ -3,7 +3,7 @@ import style from './salute.module.css'
 export default function Salute() {
     const today = new Date();
     let time = greet();
-    let user = false;
+    let user = true;
 
     function greet() {
         const currentHr = today.getHours();

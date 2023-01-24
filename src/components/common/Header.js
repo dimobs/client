@@ -1,19 +1,28 @@
 import { Link } from "react-router-dom";
+import './common.module.css'
 
 export const Header = () => {
 
 return (
-    <header className="header">
+    <header className='header'>
         <div className="logo">
             <nav>
                 <ul>
                     <li>
                         <Link to="/">Home</Link>
-                        <Link to="/about">About</Link>
-                        <Link to="/">Home</Link>
-                        <Link to="/">Home</Link>
-                        <Link to="/">Home</Link>
                     </li>
+                        <li>
+                        <Link to="/about">About</Link>
+                        </li>
+                        <li>
+                        <Link to="/register">Register</Link>
+                        </li>
+                        <li>
+                        <Link to="/login">Login</Link>
+                        </li>
+                        <li>
+                        <Link to="/logout">Logouts</Link>
+                        </li>
                 </ul>
             </nav>
             <span className="course">React Course - June 2022</span>

@@ -1,5 +1,5 @@
-import broken from '../public/brokingPic.jpg';
-import styles from '../public/public.module.css';
+import broken from '../../public/brokingPic.jpg';
+import styles from './errors.module.css';
 
 export const NotFound = () => {
     
@@ -8,8 +8,7 @@ export const NotFound = () => {
         <>
         <div className={styles.notFaound}>
 <img id={styles.sadFaceImg} className={styles.sadface} src={broken} alt="sadface" />
-        </div>
-<h1>404</h1>
+<h1 className={styles.error}>404</h1>
 <p>
 {/* {{data}} */}
 
@@ -26,6 +25,7 @@ export const NotFound = () => {
 
      </div>
  </div>
+        </div>
  </>
     )
 }

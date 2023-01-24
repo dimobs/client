@@ -5,32 +5,37 @@ import { UserList } from './components/user-list/UserList';
 import './App.css';
 import Salute from './services/Salute/Salute';
 // import { Login } from './pages/loginPage/Login';
-import Login1 from './pages/loginPage/Login1';
-import {Routes, Route} from 'react-router-dom';
-import { NotFound } from './pages/NotFound';
+import Login from './pages/loginPage/Login1';
+import { Routes, Route } from 'react-router-dom';
+// import { NotFound } from './pages/error/NotFound';
 import { Producs } from './pages/producs/Producs';
+import { Home } from './pages/home/Home';
+import { Register } from './pages/loginPage/Register';
 
 
 function App() {
     return (
         <div>
-       <Header />
-    <Routes>
-                <Route path='*' element={<NotFound />} />
-                            
-                <Route path='/search' element={<Search />} />
-                                <Route path='/products/:productId' element={<Producs />} />
+            <Header />
+            <Salute />
+            <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/register" element={<Register />} /> */}
+        {/* <Route path="/search" element={<Search />} /> */}
+                {/* <Route path='*' element={<NotFound />} /> */}
 
-                    {/* <Salute /> */}
-            {/* <Login1 /> */} 
+                {/* <Route path='/products/:productId' element={<Producs />} /> */}
 
-                    {/* <Search /> */}
-                    {/* <Login /> */}
-                    {/* <Register /> */}
-                    {/* <UserList /> */}
+                {/* <Login1 /> */}
 
-            {/* <Footer /> */}
-            </Routes>
+                {/* <Search /> */}
+                {/* <Login /> */}
+                {/* <Register /> */}
+                {/* <UserList /> */}
+
+        </Routes>
+                <Footer />
         </div>
     );
 }
