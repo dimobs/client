@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Login1() {
+function Register() {
     const [values, setValues] = useState({
         username: "",
         password: "",
@@ -79,4 +79,4 @@ function Login1() {
 
 }
 
-export default Login1;
+export default Register;

@@ -8,21 +8,12 @@ return (
         <div className="logo">
             <nav>
                 <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                        <li>
-                        <Link to="/about">About</Link>
-                        </li>
-                        <li>
-                        <Link to="/register">Register</Link>
-                        </li>
-                        <li>
-                        <Link to="/login">Login</Link>
-                        </li>
-                        <li>
-                        <Link to="/logout">Logouts</Link>
-                        </li>
+                    <li><Link to="/">Home</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/register">Register</Link></li>
+                        <li><Link to="/login">Login</Link></li>
+                        <li><Link to="/logout">Logouts</Link></li>
+                        <li><Link to="/createPay">Create Pay</Link></li>
                 </ul>
             </nav>
             <span className="course">React Course - June 2022</span>

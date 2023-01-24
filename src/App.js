@@ -4,13 +4,13 @@ import { Search } from './components/search/Search';
 import { UserList } from './components/user-list/UserList';
 import './App.css';
 import Salute from './services/Salute/Salute';
-// import { Login } from './pages/loginPage/Login';
-import Login from './pages/loginPage/Login1';
 import { Routes, Route } from 'react-router-dom';
 // import { NotFound } from './pages/error/NotFound';
 import { Producs } from './pages/producs/Producs';
 import { Home } from './pages/home/Home';
-import { Register } from './pages/loginPage/Register';
+import { Login1 } from './pages/loginPage/Login1';
+import Register from './pages/loginPage/Register';
+import { CreatePay } from './pages/CreatePay';
 
 
 function App() {
@@ -20,7 +20,10 @@ function App() {
             <Salute />
             <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/login" element={<Login />} /> */}
+        <Route path="/login" element={<Login1 />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/createPay" element={<CreatePay />} />
+        {/* <Route path="/login" element={<Register />} /> */}
         {/* <Route path="/register" element={<Register />} /> */}
         {/* <Route path="/search" element={<Search />} /> */}
                 {/* <Route path='*' element={<NotFound />} /> */}
