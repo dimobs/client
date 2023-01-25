@@ -1,20 +1,30 @@
 import styles from './createPay.module.css'
+import {Link } from 'react-router-dom';
 
-export const CreatePay = () => {
+
+export const CreatePay = ({addPayHandler}) => {
+
+const onSubmit = (e) => {
+  e.preventDefault();
+
+  const payData = Object.fromEntries(new FormData(e.target));
+
+  console.log(payData);
+  addPayHandler(payData)
+}
+
 
     return (
         <>
  <>
   <div className={styles.admin}>
-    <li>
-      <a href="/paymentHistory">View History</a>
-    </li>
+    {/* <li><a href="/paymentHistory">View History</a></li> */}
   </div>
   <h1>Payment Page</h1>
   <p>Expense Tracker</p>
   <i className={styles["fa-regular fa-arrow-right-to-arc"]} />
   <div className= {styles.form}>
-    <form action="/createPay" method="POST">
+    <form id="createPay"  onSubmit={onSubmit} >
       <select name="sender">
         <option>Select Sender Name*</option>
         <option value="Todor" selected="">
@@ -48,7 +58,6 @@ export const CreatePay = () => {
         <input
           name="date"
           type="text"
-          defaultValue="{{dateBg}}"
           placeholder="{{dateBg}}"
         />
         <label style={{ display: "inline-block" }} htmlFor="amount">
@@ -59,8 +68,7 @@ export const CreatePay = () => {
             placeholder="0.00*"
             id="amount"
             name="amount"
-            defaultValue=""
-          />
+                    />
           <i className={styles["fas fa-hand-holding-usd"]} />
         </div>
         {"{"}
@@ -78,7 +86,7 @@ export const CreatePay = () => {
             id="name"
             placeholder="Pay for?"
             name="description"
-            defaultValue={""}
+    
           />
           {"{"}
           {"{"}!--{" "}
@@ -91,9 +99,9 @@ export const CreatePay = () => {
           placeholder="Add image"
           id="image"
           name="imageUrl"
-          defaultValue=""
+        
         />
-        <input type="submit" defaultValue="Publish" />
+        <input type="submit" />
       </h5>
     </form>
   </div>

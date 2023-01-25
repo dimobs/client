@@ -14,6 +14,7 @@ return (
                         <li><Link to="/login">Login</Link></li>
                         <li><Link to="/logout">Logouts</Link></li>
                         <li><Link to="/createPay">Create Pay</Link></li>
+                        <li><Link to="/historyPay">History Pay</Link></li>
                 </ul>
             </nav>
             <span className="course">React Course - June 2022</span>
