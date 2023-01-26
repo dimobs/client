@@ -16,7 +16,6 @@ const onSubmit = (e) => {
 
     return (
         <>
- <>
   <div className={styles.admin}>
     {/* <li><a href="/paymentHistory">View History</a></li> */}
   </div>
@@ -105,8 +104,6 @@ const onSubmit = (e) => {
       </h5>
     </form>
   </div>
-</>
-
         </>
     )
 }

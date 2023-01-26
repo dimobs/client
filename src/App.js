@@ -21,14 +21,13 @@ const navigate = useNavigate();
 
 const addPayHandler = (payData) => {
 setPay(state => [
-    ...state,
-    {
+    ...state, {
         ...payData,
         _id: uniqid 
     }
 ]);
 
-navigate('/')
+navigate('/historyPay')
 }
 
     return (

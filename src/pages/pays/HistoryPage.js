@@ -1,32 +1,13 @@
+import { Item } from "./item";
+import uniqid from 'uniqid'
 
  export const HistoryPage = ({
-  pay
+pays
 }) => {
-
+console.log(pays);
   return (
-    <>
-     <div className="admin">
-    <li><a href="/createPay">Create</a></li>
-    <p>Table:</p>
-    {"{"}
-    {"{"}#each tablePays{"}"}
-    {"}"}
-    {"{"}
-    {"{"}&gt; payPreview{"}"}
-    {"}"}
-    {"{"}
-    {"{"}else{"}"}
-    {"}"}
-    <p>
-      No pays in database. <a href="/createPay">Create the first listing!</a>
-    </p>
-    {"{"}
-    {"{"}/each{"}"}
-    {"}"}
-    {pay?.map(x => {
-      console.log(x);
-    })}
-    <table>
+    <>   
+      <table>
       <colgroup className="colgroup">
         <col style={{ backgroundColor: "burlywood" }} />
         <col span={99} />
@@ -40,10 +21,15 @@
           <th>Money</th>
           <th>Description</th>
         </tr>
+        {pays.map(x => {
+        return(
+        <Item key={uniqid} x={x} />
+        )
+      })}
         <tr className="tr" />
       </tbody>
     </table>
-  </div>
+    : <p>No pay history yet!</p>
     </>
   )
  }
