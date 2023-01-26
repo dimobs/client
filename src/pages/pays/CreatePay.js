@@ -38,7 +38,7 @@ const onSubmit = (e) => {
       </select>
       <select name="resiver">
         <option>Select Resiver Name*</option>
-        <option value="Todor">Todor Yankov Karachorbadzhiev</option>
+        <option defaultValue={"Todor"}>Todor Yankov Karachorbadzhiev</option>
         <option value="Dimo" selected="">
           Dimo Yankov Karachorbadzhiev
         </option>
